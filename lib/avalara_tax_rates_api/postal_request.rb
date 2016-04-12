@@ -10,7 +10,7 @@ module AvalaraTaxRatesApi
     end
 
     def url
-      "#{base_url}/postal?country=#{country}&postal=#{postal}"
+      URI.encode "#{base_url}/postal?country=#{country}&postal=#{postal}"
     end
 
   end
