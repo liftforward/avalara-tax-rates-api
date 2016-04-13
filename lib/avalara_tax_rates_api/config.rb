@@ -3,6 +3,7 @@ module AvalaraTaxRatesApi
     class << self
       attr_accessor :base_url,
                     :api_key,
+                    :proxy_url,
                     :log,
                     :log_level
     end

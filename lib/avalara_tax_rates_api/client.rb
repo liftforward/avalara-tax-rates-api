@@ -14,6 +14,7 @@ module AvalaraTaxRatesApi
 
     private
     def get request
+      RestClient.proxy = request.proxy_url
       RestClient::Request.execute(method: :get,
                                   url: request.url,
                                   headers: request.headers)
