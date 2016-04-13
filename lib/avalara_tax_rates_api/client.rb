@@ -1,13 +1,13 @@
 module AvalaraTaxRatesApi
   class Client
-    def get_tax_rates_by_address(params)
-      request = AvalaraTaxRatesApi::AddressRequest.new(params)
+    def get_tax_rates_by_address(street:, city:, state:, postal:, country: 'usa', options: {})
+      request = AvalaraTaxRatesApi::AddressRequest.new(street: street, city: city, state: state, postal: postal, country: country, options: options)
       response = get(request)
       AvalaraTaxRatesApi::Response.new(response_body: response.body, request: request)
     end
 
-    def get_tax_rates_by_postal(postal:, country: "usa")
-      request = AvalaraTaxRatesApi::PostalRequest.new(postal: postal, country: country)
+    def get_tax_rates_by_postal(postal:, country: "usa", options: {})
+      request = AvalaraTaxRatesApi::PostalRequest.new(postal: postal, country: country, options: options)
       response = get(request)
       AvalaraTaxRatesApi::Response.new(response_body: response.body, request: request)
     end
