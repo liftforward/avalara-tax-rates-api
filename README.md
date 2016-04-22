@@ -24,6 +24,7 @@ $ gem install avalara-tax-rates-api
 
 ### Configuration
 TODO
+
 ### Working with the API
 
 TODO
@@ -36,7 +37,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ### Running the integration suite
 To run the integration suite you will need credentials from Paynet. Once you have your credentials set them in the following environment variables:
 ```
-TODO
+BASE_URL=https://taxrates.api.avalara.com
+API_KEY={your api key}
+PROXY_URL={your proxy url if used}
 ```
 
 ## Contributing
